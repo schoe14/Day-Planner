@@ -1,4 +1,32 @@
-#header {
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lato', sans-serif;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #F8B195;
+    width: 100%;
+    z-index: 10;
+    padding: 5px;
+}
+
+.sticky+.content {
+    padding-top: 102px;
+}
+
+.jumbotron {
+    width:100%;
+    background-color: #F8B195;
+}
+
+#title {
     font-size: 40px;
     padding: 5px;
 }
@@ -16,22 +44,85 @@
     padding: 0 !important;
 }
 
+.col-10 {
+    border: solid 1px cornsilk;
+}
+
 .form-control {
     color: black !important;
+    line-height: 1em;
+}
 
+.button {
+    border-bottom: solid 1px cornsilk;
 }
 
 .time {
     font-size: 15px;
     padding: 5px !important;
     text-align: right;
-    border-top: solid 1px grey;
+    border-top: solid 1px #BBBBBB;
+}
+
+.btn:focus, .btn:active, .btn:hover, .form-control:focus {
+    outline: none !important;
+    box-shadow: none;
 }
 
 .btn-primary {
+    padding: 0 !important;
+    color: white;
+    border: none;
     height: 100%;
     width: 100%;
-    border-bottom: solid 1px;
     background-color: #51a6ea;
 }
 
+.btn-primary:focus, .btn-primary:active {
+    background-color: #51a6ea;
+}
+
+.btn-primary:hover {
+    background-color: #297CA0;
+}
+
+.buttons {
+    margin-top: 25px;
+}
+
+.btn-outline-primary {
+    height: 100%;
+    width: 100%;
+}
+
+.btn-outline-primary:hover {
+    background-color: #51a6ea;
+}
+
+.page-footer {
+    background-color: #F8B195;
+}
+
+@media only screen and (max-width: 424px) {
+    .time {
+        padding: 0 !important;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .sticky {
+        padding-top: 12px;
+    }
+}
+
+@media (hover:none), (hover:on-demand) {
+    .btn-outline-primary:hover {
+        background: none;
+        color: #007bff;
+    }
+    .btn-primary:hover {
+        background: #51a6ea;
+        color: white;
+    }
+}

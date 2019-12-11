@@ -10,107 +10,126 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0267c1aa62.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Day Planner</title>
 </head>
 
 <body>
     <div class="jumbotron">
-        <div class="text-center" id="header">Work Day Scheduler</div>
-        <div class="text-center" id="today"></div>
+        <div class="top-container">
+            <div class="text-center" id="title">Work Day Scheduler <i class="far fa-calendar-alt"></i></div>
+            <div class="text-center" id="today"></div>
+        </div>
     </div>
 
-    <div class="container main" style="max-width: 960px;">
+    <div class="container-fluid main" style="max-width: 960px;">
         <div class="row">
             <div class="col-1 time" id="time1"></div>
             <div class="col-10">
-                <input class="form-control" type="text" id="todo1"></input>
+                <textarea class="form-control" rows="4" cols="50" id="todo1"> </textarea>
+                <!-- <input class="form-control" type="text" id="todo1"></input> -->
             </div>
-            <div class="col-1">
-                <button type="button" class="btn btn-primary btn-lg" id=""></button>
+            <div class="col-1 button">
+                <button type="button" class="btn btn-primary btn-lg"><i class="fas fa-save"></i></button>
             </div>
         </div>
         <div class="row">
             <div class="col-1 time" id="time2"></div>
             <div class="col-10">
-                <input class="form-control" type="text" id="todo2"></input>
+                <textarea class="form-control" rows="4" cols="50" id="todo2">                </textarea>
+
+                <!-- <input class="form-control" type="text" id="todo2"></input> -->
             </div>
-            <div class="col-1">
-                <button type="button" class="btn btn-primary btn-lg" id=""></button>
+            <div class="col-1 button">
+                <button type="button" class="btn btn-primary btn-lg"><i class="fas fa-save"></i></button>
             </div>
         </div>
         <div class="row">
             <div class="col-1 time" id="time3"></div>
             <div class="col-10">
-                <input class="form-control" type="text" id="todo3"></input>
+                <textarea class="form-control" rows="4" cols="50" id="todo3">                </textarea>
+
+                <!-- <input class="form-control" type="text" id="todo3"></input> -->
             </div>
-            <div class="col-1">
-                <button type="button" class="btn btn-primary btn-lg" id=""></button> </div>
+            <div class="col-1 button">
+                <button type="button" class="btn btn-primary btn-lg"><i class="fas fa-save"></i></button>
+            </div>
         </div>
         <div class="row">
             <div class="col-1 time" id="time4"></div>
             <div class="col-10">
-                <input class="form-control" type="text" id="todo4"></input>
+                <textarea class="form-control" rows="4" cols="50" id="todo4">                </textarea>
+
+                <!-- <input class="form-control" type="text" id="todo4"></input> -->
             </div>
-            <div class="col-1">
-                <button type="button" class="btn btn-primary btn-lg" id=""></button>
+            <div class="col-1 button">
+                <button type="button" class="btn btn-primary btn-lg"><i class="fas fa-save"></i></button>
             </div>
         </div>
         <div class="row">
             <div class="col-1 time" id="time5"></div>
             <div class="col-10">
-                <input class="form-control" type="text" id="todo5"></input>
+                <textarea class="form-control" rows="4" cols="50" id="todo5">                </textarea>
+
+                <!-- <input class="form-control" type="text" id="todo5"></input> -->
             </div>
-            <div class="col-1">
-                <button type="button" class="btn btn-primary btn-lg" id=""></button>
+            <div class="col-1 button">
+                <button type="button" class="btn btn-primary btn-lg"><i class="fas fa-save"></i></button>
             </div>
         </div>
         <div class="row">
             <div class="col-1 time" id="time6"></div>
             <div class="col-10">
-                <input class="form-control" type="text" id="todo6"></input>
+                <textarea class="form-control" rows="4" cols="50" id="todo6">                </textarea>
+
+                <!-- <input class="form-control" type="text" id="todo6"></input> -->
             </div>
-            <div class="col-1">
-                <button type="button" class="btn btn-primary btn-lg" id=""></button>
+            <div class="col-1 button">
+                <button type="button" class="btn btn-primary btn-lg"><i class="fas fa-save"></i></button>
             </div>
         </div>
         <div class="row">
             <div class="col-1 time" id="time7"></div>
             <div class="col-10">
-                <input class="form-control" type="text" id="todo7"></input>
+                <textarea class="form-control" rows="4" cols="50" id="todo7">                </textarea>
+
+                <!-- <input class="form-control" type="text" id="todo7"></input> -->
             </div>
-            <div class="col-1">
-                <button type="button" class="btn btn-primary btn-lg" id=""></button>
+            <div class="col-1 button">
+                <button type="button" class="btn btn-primary btn-lg"><i class="fas fa-save"></i></button>
             </div>
         </div>
         <div class="row">
             <div class="col-1 time" id="time8"></div>
             <div class="col-10">
-                <input class="form-control" type="text" id="todo8"></input>
+                <textarea class="form-control" rows="4" cols="50" id="todo8">                </textarea>
+
+                <!-- <input class="form-control" type="text" id="todo8"></input> -->
             </div>
-            <div class="col-1">
-                <button type="button" class="btn btn-primary btn-lg" id=""></button>
+            <div class="col-1 button">
+                <button type="button" class="btn btn-primary btn-lg"><i class="fas fa-save"></i></button>
             </div>
         </div>
         <div class="row">
             <div class="col-1 time" id="time9"></div>
             <div class="col-10">
-                <input class="form-control" type="text" id="todo9"></input>
+                <textarea class="form-control" rows="4" cols="50" id="todo9">                </textarea>
+
+                <!-- <input class="form-control" type="text" id="todo9"></input> -->
             </div>
-            <div class="col-1">
-                <button type="button" class="btn btn-primary btn-lg" id=""></button>
+            <div class="col-1 button">
+                <button type="button" class="btn btn-primary btn-lg"><i class="fas fa-save"></i></button>
             </div>
         </div>
-        <div class="row">
-
+        <div class="row buttons">
             <div class="col-6 text-center">
                 <button type="button" class="btn btn-outline-primary" id="Previous">Previous Day</button>
             </div>
-
             <div class="col-6 text-center">
                 <button type="button" class="btn btn-outline-primary" id="Next">Next Day</button>
             </div>
-
         </div>
     </div>
 

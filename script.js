@@ -1,7 +1,5 @@
 $(document).ready(function () {
-
     var startDate = moment();
-
     var values = [
         {
             timeVal: null,
@@ -50,7 +48,19 @@ $(document).ready(function () {
         }
     ]
 
-    // Display current day & date and times for the scheduler
+    // Display sticky header that shows today's day & date when scroll down
+    window.onscroll = function () { displayHeader() };
+    var header = document.getElementById("today");
+    var sticky = header.offsetTop;
+    function displayHeader() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+
+    // Display current day & date and hours for the scheduler
     function setTimes() {
         let currentDay = startDate.format('dddd');
         let currentDate = startDate.format('MMMM Do YYYY');
@@ -59,61 +69,37 @@ $(document).ready(function () {
         $("#today").text(currentDay + ", " + currentDate);
 
         var hours = 9;
-        
-        values.forEach(function (element) {
-            let temp = startDate.clone().startOf('day').add(hours, 'hours');
-            // element.timeVal.text(startDate.startOf('day').add(hours, 'hours'));
-            element.timeVal = temp;
-            // console.log(element.timeVal);
-            element.timeEl.text(temp.format("h A"));
-            // element.timeEl.text(element.timeVal.format("h A"));
-            element.timeEl.attr("value", today);
-            hours++;
-            
-        })
 
         values.forEach(function (element) {
-            console.log(element.timeVal);
+            let temp = startDate.clone().startOf('day').add(hours, 'hours');
+            element.timeVal = temp;
+            element.timeEl.text(temp.format("h A"));
+            element.timeEl.attr("value", today);
+            hours++;
         })
     }
 
-    // Dinamically display colors associated with time
+    // Dinamically display colors associated with each hour
     function colorCode() {
         values.forEach(function (element) {
             element.todoEl.css("height", "80px");
 
-            let then = element.timeVal.format("MMM Do YY");
-            let now = moment().format("MMM Do YY");
-            
-            // if (then.isBefore(now) == true) {
-            //     element.todoEl.css("background-color", "gray");
-            // }
-            // else if (then.diff(now, "hours") < 1) {
-            //     element.todoEl.css("background-color", "red");
-            //     console.log(then.diff(now, "minutes") < 60)
-            // }
+            // Comparing each hour on the scheduler and current time in that day
+            let eachHour = element.timeVal.format("H");
+            let currentTime = startDate.format("H");
 
-            // console.log(element.timeVal.format("H"));
-            // console.log(startDate.format("H"));
-            console.log(now);
-            console.log(then);
-            console.log(now > then);
-            
+            // Comparing day on the scheduler and today
+            let then = startDate.format("YYYY-MM-DD");
+            let now = moment().format("YYYY-MM-DD");
 
-            // if(now > then) {
-            //     console
-            // }
-
-            if (element.timeVal.format("H") - startDate.format("H") < 0) {
-                element.todoEl.css("background-color", "gray");
+            if ((eachHour - currentTime < 0 && now == then) || now > then == true) {
+                element.todoEl.css("background-color", "#d3d3d3");
             }
-            
-            else if (element.timeVal.format("H") - startDate.format("H") == 0) {
-                element.todoEl.css("background-color", "red");
+            else if (eachHour - currentTime == 0 && now == then) {
+                element.todoEl.css("background-color", "#FF6347");
             }
             else {
-                element.todoEl.css("background-color", "green");
-
+                element.todoEl.css("background-color", "#90ee90");
             }
         })
     }
@@ -123,8 +109,7 @@ $(document).ready(function () {
 
     // If a button is clicked, input will be saved in local storage
     $(".btn-primary").on("click", function (e) {
-        let userInput = $(this).closest('div.row').find("input[class='form-control']").val();
-        // let timeForTodo = $(this).closest('div.row').find('.time').text() + ", " + today;
+        let userInput = $(this).closest('div.row').find("textarea[class='form-control']").val().trim();
         let timeTargeted = $(this).closest('div.row').find('.time');
         let timeForTodo = timeTargeted.text() + ", " + timeTargeted.attr("value");
 
@@ -133,10 +118,9 @@ $(document).ready(function () {
         for (var i = 0; i < arr.length; i++) {
             if (arr[i].time == timeForTodo) arr.splice(i, 1);
         }
+
         arr.push({ "time": timeForTodo, "todo": userInput });
         localStorage.setItem("data", JSON.stringify(arr));
-        console.log(timeForTodo);
-        console.log(userInput);
     })
 
     // Display stored todos in input fields even when the application is refreshed
@@ -153,9 +137,8 @@ $(document).ready(function () {
         });
     }
 
-
     $(".btn-outline-primary").on("click", function (e) {
-        let btnValue = $(e.target).text();
+        let btnValue = $(this).text();
         if (btnValue == "Previous Day") {
             this.startDate = startDate.subtract(1, "days");
         }
@@ -165,15 +148,7 @@ $(document).ready(function () {
         setTimes();
         colorCode();
         displayTodos();
-        values.forEach(function (e) {
-            console.log(e.timeVal)
-        })
     })
-
-
-
-
-    // localStorage.clear();
 
     setTimes();
     colorCode();
