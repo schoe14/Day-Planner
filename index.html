@@ -16,7 +16,7 @@
 
 <body>
     <div class="jumbotron">
-        <div class="text-center">Work Day Scheduler</div>
+        <div class="text-center" id="header">Work Day Scheduler</div>
         <div class="text-center" id="today"></div>
     </div>
 
@@ -24,7 +24,7 @@
         <div class="row">
             <div class="col-1 time" id="time1"></div>
             <div class="col-10">
-                <input class="todo" type="text" id="todo1"></input>
+                <input class="form-control" type="text" id="todo1"></input>
             </div>
             <div class="col-1">
                 <button type="button" class="btn btn-primary btn-lg" id=""></button>
@@ -33,7 +33,7 @@
         <div class="row">
             <div class="col-1 time" id="time2"></div>
             <div class="col-10">
-                <input class="todo" type="text" id="todo2"></input>
+                <input class="form-control" type="text" id="todo2"></input>
             </div>
             <div class="col-1">
                 <button type="button" class="btn btn-primary btn-lg" id=""></button>
@@ -42,7 +42,7 @@
         <div class="row">
             <div class="col-1 time" id="time3"></div>
             <div class="col-10">
-                <input class="todo" type="text" id="todo3"></input>
+                <input class="form-control" type="text" id="todo3"></input>
             </div>
             <div class="col-1">
                 <button type="button" class="btn btn-primary btn-lg" id=""></button> </div>
@@ -50,7 +50,7 @@
         <div class="row">
             <div class="col-1 time" id="time4"></div>
             <div class="col-10">
-                <input class="todo" type="text" id="todo4"></input>
+                <input class="form-control" type="text" id="todo4"></input>
             </div>
             <div class="col-1">
                 <button type="button" class="btn btn-primary btn-lg" id=""></button>
@@ -59,7 +59,7 @@
         <div class="row">
             <div class="col-1 time" id="time5"></div>
             <div class="col-10">
-                <input class="todo" type="text" id="todo5"></input>
+                <input class="form-control" type="text" id="todo5"></input>
             </div>
             <div class="col-1">
                 <button type="button" class="btn btn-primary btn-lg" id=""></button>
@@ -68,7 +68,7 @@
         <div class="row">
             <div class="col-1 time" id="time6"></div>
             <div class="col-10">
-                <input class="todo" type="text" id="todo6"></input>
+                <input class="form-control" type="text" id="todo6"></input>
             </div>
             <div class="col-1">
                 <button type="button" class="btn btn-primary btn-lg" id=""></button>
@@ -77,7 +77,7 @@
         <div class="row">
             <div class="col-1 time" id="time7"></div>
             <div class="col-10">
-                <input class="todo" type="text" id="todo7"></input>
+                <input class="form-control" type="text" id="todo7"></input>
             </div>
             <div class="col-1">
                 <button type="button" class="btn btn-primary btn-lg" id=""></button>
@@ -86,7 +86,7 @@
         <div class="row">
             <div class="col-1 time" id="time8"></div>
             <div class="col-10">
-                <input class="todo" type="text" id="todo8"></input>
+                <input class="form-control" type="text" id="todo8"></input>
             </div>
             <div class="col-1">
                 <button type="button" class="btn btn-primary btn-lg" id=""></button>
@@ -95,13 +95,29 @@
         <div class="row">
             <div class="col-1 time" id="time9"></div>
             <div class="col-10">
-                <input class="todo" type="text" id="todo9"></input>
+                <input class="form-control" type="text" id="todo9"></input>
             </div>
             <div class="col-1">
                 <button type="button" class="btn btn-primary btn-lg" id=""></button>
             </div>
         </div>
+        <div class="row">
+
+            <div class="col-6 text-center">
+                <button type="button" class="btn btn-outline-primary" id="Previous">Previous Day</button>
+            </div>
+
+            <div class="col-6 text-center">
+                <button type="button" class="btn btn-outline-primary" id="Next">Next Day</button>
+            </div>
+
+        </div>
     </div>
+
+    <footer class="page-footer font-small">
+        <div class="footer-copyright text-center py-3">© 2019 Copyright: Seohui Choe
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
