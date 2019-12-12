@@ -5,7 +5,7 @@
 Planning helps you to be prepared for obstacles :collision: because part of the planning process is creating a contingency pan for unexpected problems in the fast-paced business environment :office:
 
 # Screenshots
-<a href="https://schoe14.github.io/Day-Planner/"><img src="assets/screenshot1.jpg" style="width:400px;"></a> <a href="https://schoe14.github.io/Day-Planner/"><img src="assets/screenshot2.jpg" style="width:459px;"></a>
+<a href="https://schoe14.github.io/Day-Planner/"><img src="https://github.com/schoe14/Day-Planner/blob/master/assets/screenshot1.JPG" style="width:400px;"></a> <a href="https://schoe14.github.io/Day-Planner/"><img src="https://github.com/schoe14/Day-Planner/blob/master/assets/screenshot2.JPG" style="width:459px;"></a>
 
 # Tech/framework used
 * JavaScript
