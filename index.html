@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0267c1aa62.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
     <title>Day Planner</title>
 </head>
 
@@ -22,12 +22,11 @@
         <div class="text-center" id="today"></div>
     </div>
 
-    <div class="container-fluid main" style="max-width: 960px;">
+    <div class="container-fluid main">
         <div class="row">
             <div class="col-1 time" id="time1"></div>
             <div class="col-10">
-                <textarea class="form-control" rows="4" cols="50" id="todo1"> </textarea>
-                <!-- <input class="form-control" type="text" id="todo1"></input> -->
+                <textarea class="form-control" rows="4" cols="50" id="todo1"></textarea>
             </div>
             <div class="col-1 button">
                 <button type="button" class="btn btn-primary btn-lg"><i class="fas fa-save"></i></button>
@@ -107,10 +106,10 @@
         </div>
         <div class="row buttons">
             <div class="col-6 text-center">
-                <button type="button" class="btn btn-outline-primary" id="Previous">Previous Day</button>
+                <button type="button" class="btn btn-outline-primary" id="previous">Previous Day</button>
             </div>
             <div class="col-6 text-center">
-                <button type="button" class="btn btn-outline-primary" id="Next">Next Day</button>
+                <button type="button" class="btn btn-outline-primary" id="next">Next Day</button>
             </div>
         </div>
     </div>

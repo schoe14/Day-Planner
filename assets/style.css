@@ -40,7 +40,7 @@ html, body {
     max-width: 960px;
 }
 
-.col-10, .col-1, .col-6{
+.col-10, .col-1, .col-6 {
     margin: 0 !important;
     padding: 0 !important;
 }
