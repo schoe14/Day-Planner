@@ -1,52 +1,37 @@
 # Day-Planner
+:date: A calendar program with sections for each day and the different times of the day created with JavaScript, j-Query, and Moment.js
+
 # Motivation
-### hi
-⋅⋅* hi
+Planning helps you to be prepared for obstacles :collision: because part of the planning process is creating a contingency pan for unexpected problems in the fast-paced business environment :office:
 
 # Screenshots
-<a href="https://schoe14.github.io/Code-Quiz/"><img src="" style="width:700px; height:auto;"></a>
-<a href="https://schoe14.github.io/Code-Quiz/"><img src="" style="width:700px; height:auto;"></a>
-<a href="https://schoe14.github.io/Code-Quiz/"><img src="" style="width:700px; height:auto;"></a>
-<a href="https://schoe14.github.io/Code-Quiz/"><img src="" style="width:700px; height:auto;"></a>
+<a href="https://schoe14.github.io/Day-Planner/"><img src="assets/screenshot1.jpg" style="width:400px;"></a> <a href="https://schoe14.github.io/Day-Planner/"><img src="assets/screenshot2.jpg" style="width:459px;"></a>
 
 # Tech/framework used
-1. JavaScript
-1. j-Query
-1. Moment.js
-1. Git
-1. Visual Studio Code
-1. Github
-1. GitLab
-1. HTML
-1. CSS
-1. Bootstrap
-1. Slack
-1. Google Drive
+* JavaScript
+* j-Query
+* Moment.js
+* Git
+* Visual Studio Code
+* Github
+* GitLab
+* HTML
+* CSS
+* Bootstrap 4
+* Slack
+* Google Drive
 
-# API Reference
-[`GlobalEventHandlers.onload`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload)
-[`Document.querySelectorAll()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)
-[`Node.textContent`](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent)
-[`EventTarget.addEventListener()`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
-[`Event.preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
-[`WindowOrWorkerGlobalScope.clearInterval()`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval)
-[`Array.prototype.forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-[`Element.innerHTML`](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
-[`WindowOrWorkerGlobalScope.setInterval()`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
-[`Element.matches()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/matches)
-[`HTMLMediaElement.play()`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/play)
-[`WindowOrWorkerGlobalScope.setTimeout()`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)
-[`.fadeOut()`](https://api.jquery.com/fadeout/)
-[`.keypress()`](https://api.jquery.com/keypress/)
-[`Storage.setItem()`](https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem)
-[`JSON.parse()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
-[`Storage.getItem()`](https://developer.mozilla.org/en-US/docs/Web/API/Storage/getItem)
-[`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
-[`ParentNode.append()`](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append)
-[`Storage.clear()`](https://developer.mozilla.org/en-US/docs/Web/API/Storage/clear)
-[`GlobalEventHandlers.onclick`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick)
-[`Document.createElement()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
-[`Document.getElementById()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)
-[`Document.createTextNode()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/createTextNode)
+# Setup
+To run this project, visit [GitHub Page](https://schoe14.github.io/Day-Planner/ "Seohui's GitHub Page") or clone :computer:
+</br> 
+<pre> git clone https://github.com/schoe14/Day-Planner.git </pre>
 
 # Tests
+1. Color Codes
+   * Dinamically change colors of each time block
+   * Compare the time value assigned to each block and the current time
+   * `Moment.js`
+2. Local Storage
+   * Save time, date, text content in local storage if save button is clicked
+   * Retrive data to the corresponding block when the page is loaded or refreshed or directed to other days
+   * `JSON`

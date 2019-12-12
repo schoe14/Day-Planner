@@ -105,13 +105,13 @@ $(document).ready(function () {
     }
 
     var arr = [];
-    var storedValues = JSON.parse(localStorage.getItem("data"));
 
     // If a button is clicked, input will be saved in local storage
     $(".btn-primary").on("click", function (e) {
         let userInput = $(this).closest('div.row').find("textarea[class='form-control']").val().trim();
         let timeTargeted = $(this).closest('div.row').find('.time');
         let timeForTodo = timeTargeted.text() + ", " + timeTargeted.attr("value");
+        let storedValues = JSON.parse(localStorage.getItem("data"));
 
         if (storedValues !== null) arr = storedValues;
 
@@ -125,6 +125,8 @@ $(document).ready(function () {
 
     // Display stored todos in input fields even when the application is refreshed
     function displayTodos() {
+        let storedValues = JSON.parse(localStorage.getItem("data"));
+
         values.forEach(function (element) {
             let timeForTodo = element.timeEl.text() + ", " + element.timeEl.attr("value");
             let todoDisplayed = element.todoEl;
@@ -134,9 +136,10 @@ $(document).ready(function () {
                     if (storedValues[i].time == timeForTodo) todoDisplayed.val(storedValues[i].todo);
                 }
             }
-        });
+        })
     }
-
+    
+    // If previous or next day button is clicked, subtract or add one calendar day
     $(".btn-outline-primary").on("click", function (e) {
         let btnValue = $(this).text();
         if (btnValue == "Previous Day") {
